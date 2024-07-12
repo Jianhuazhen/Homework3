@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Login from './components/Login';
+import Register from './components/Register';
+import Notes from './components/Notes';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [user, setUser] = useState(null);
+
+    if (user) {
+        return <Notes />;
+    }
+
+    return (
+        <div>
+            <h1>Note App</h1>
+            <Login setUser={setUser} />
+            <Register setUser={setUser} />
+        </div>
+    );
+};
 
 export default App;
