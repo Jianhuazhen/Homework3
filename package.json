@@ -1,7 +1,7 @@
 {
   "name": "note-app",
   "version": "0.1.0",
-  "homepage": "https://yourusername.github.io/repository-name",
+  "homepage": "https://github.com/Jianhuazhen/Homework3",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
